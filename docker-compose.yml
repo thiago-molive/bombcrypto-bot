@@ -1,0 +1,41 @@
+version: "3"
+services:
+  bot-1:
+    container_name: bot-1
+    tty: true
+    build:
+      context: .
+    restart: unless-stopped
+    cap_add:
+      # Google Chrome
+      - SYS_ADMIN
+    environment:
+      - VNC_PASSWORD=bot1
+      - HTTP_PASSWORD=bot1
+      - TZ=America/Sao_Paulo
+      - RESOLUTION=1920x1080
+    volumes:
+       - /dev/shm:/dev/shm
+    ports:
+      - 5900:5900
+      - 6080:80
+
+  bot-2:
+    container_name: bot-2
+    tty: true
+    build:
+      context: .
+    restart: unless-stopped
+    cap_add:
+      # Google Chrome
+      - SYS_ADMIN
+    environment:
+      - VNC_PASSWORD=bot2
+      - HTTP_PASSWORD=bot2
+      - TZ=America/Sao_Paulo
+      - RESOLUTION=1920x1080
+    volumes:
+       - /dev/shm:/dev/shm
+    ports:
+      - 5901:5900
+      - 6081:80
