@@ -10,10 +10,11 @@ services:
       # Google Chrome
       - SYS_ADMIN
     environment:
-      - VNC_PASSWORD=bot1
-      - HTTP_PASSWORD=bot1
+      - VNC_PASSWORD=123mudar
+      - HTTP_PASSWORD=123mudar
       - TZ=America/Sao_Paulo
       - RESOLUTION=1920x1080
+      - USER=ubuntu
     volumes:
        - /dev/shm:/dev/shm
     ports:
@@ -30,10 +31,11 @@ services:
       # Google Chrome
       - SYS_ADMIN
     environment:
-      - VNC_PASSWORD=bot2
-      - HTTP_PASSWORD=bot2
+      - VNC_PASSWORD=123mudar
+      - HTTP_PASSWORD=123mudar
       - TZ=America/Sao_Paulo
       - RESOLUTION=1920x1080
+      - USER=ubuntu
     volumes:
        - /dev/shm:/dev/shm
     ports:
